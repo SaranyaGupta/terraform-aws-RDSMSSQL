@@ -32,6 +32,7 @@ Role="Database",
 ServiceCriticality="High",
 SupportContact="Support@gmail.com"
 }
+monitoring_role_name="mssql-monitoring-role"
 db_subnet_group_name="rdsmssql-subnet"
 db_subnet_group_description= "test db rds mssql subnet group"
 subnet_ids=["subnet-0b86a94123ccf1094","subnet-04eff055558594bd7","subnet-0bbf1e60c1a0f1db1"]
