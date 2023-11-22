@@ -54,7 +54,7 @@ module "existing_sg_rules" {
 }
 
 module "db_instance" {
-  source = "./modules/rdsmysql"
+  source = "./modules/rdsmssql"
   create                              = local.create_db_instance
   identifier                          = var.identifier
   use_identifier_prefix               = var.instance_use_identifier_prefix
