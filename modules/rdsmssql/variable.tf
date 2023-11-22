@@ -140,7 +140,7 @@ variable "master_user_secret_kms_key_id" {
 variable "port" {
   description = "The port on which the DB accepts connections"
   type        = string
-  default     = null
+  default     = "1433"
 }
 
 variable "skip_final_snapshot" {
