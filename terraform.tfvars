@@ -78,7 +78,7 @@ security_rules = {
 vpc_id = "vpc-0419802ed12eec58a"
 existing_sg_rules = {
 sg-0c5426001fd0fb679 = {
-"rule1" = { type = "ingress", from_port = 80, to_port = 80, protocol = "http", cidr_blocks = ["0.0.0.0/0"], description = "For SSH" }
+"rule1" = { type = "ingress", from_port = 80, to_port = 80, protocol = "tcp", cidr_blocks = ["0.0.0.0/0"], description = "For SSH" }
 }
 #,sg-0294c098f15df980e = {
 #"rule1" = { type = "ingress", from_port = 443, to_port = 443, protocol = "tcp", cidr_blocks = ["0.0.0.0/0"], description = "For SSH" }
