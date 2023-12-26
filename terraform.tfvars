@@ -46,16 +46,6 @@ family= "sqlserver-se-16.0"
 major_engine_version= "16.00"
 option_group_name= "rdsmssql-option-group"
 option_group_description= "test db rds mssql option group" 
-/*
-parameters = [{
-     "name"  = "character_set_client"
-     "value" = "utf8mb4"
-      },
-    {
-      "name"  = "character_set_server"
-      "value" = "utf8mb4"
-    }]
-*/
 options = [
         {
           name  = "SERVER_AUDIT_EVENTS"
@@ -67,12 +57,12 @@ options = [
         },
 ]
 security_rules = {
-  sg4 = {
+  rds_sg3_mssql = {
     "rule1" = { type = "ingress", from_port = 22, to_port = 22, protocol = "tcp", cidr_blocks = ["0.0.0.0/0"], description = "For SSH" },
     "rule2" = { type = "ingress", from_port = 443, to_port = 443, protocol = "tcp", cidr_blocks = ["0.0.0.0/0"], description = "For SSH" },
     "rule3" = { type = "egress", from_port = 22, to_port = 22, protocol = "tcp", cidr_blocks = ["0.0.0.0/0"], description = "For SSH" }
   }
-  sg5 = {
+  rds_sg4_mssql = {
     "rule1" = { type = "ingress", from_port = 22, to_port = 22, protocol = "tcp" , cidr_blocks = ["0.0.0.0/0"], description = "For SSH"}
   }
 }
@@ -87,3 +77,4 @@ sg-0c5426001fd0fb679 = {
 }
 ok_alarm = ["arn:aws:sns:us-east-2:215691912540:RDSAlarm"]
 actions_alarm = ["arn:aws:sns:us-east-2:215691912540:RDSAlarm"]
+monitoring_role_name = "rds-mssql-monitoring-role"
