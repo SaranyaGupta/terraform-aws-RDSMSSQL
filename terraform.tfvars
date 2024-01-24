@@ -90,6 +90,7 @@ sg-0c5426001fd0fb679 = {
 }
 ok_alarm            = ["arn:aws:sns:us-east-2:215691912540:RDSAlarm"]
 actions_alarm       = ["arn:aws:sns:us-east-2:215691912540:RDSAlarm"]
+##MONITORING ROLE NAME FORMAT --> <role>-<aws-service>-<App-name>-<Environment>-<Functional-use> ##
 monitoring_role_name = "rds-mssql-monitoring-role"
 
 ##optional variables. default values mentioned in variable.tf file##
