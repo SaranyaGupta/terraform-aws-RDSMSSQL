@@ -1,6 +1,6 @@
 resource "aws_cloudwatch_metric_alarm" "cpu_utilization_too_high" {
   count               = var.create_high_cpu_alarm ? 1 : 0
-  alarm_name          = "{"${var.name}"-"HighCPUUsage"}"
+  alarm_name          = "${var.name}"-"HighCPUUsage"
   comparison_operator = "GreaterThanOrEqualToThreshold"
   evaluation_periods  = "1"
   metric_name         = "CPUUtilization"
