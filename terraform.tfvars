@@ -6,7 +6,6 @@ create_cloudwatch_log_group			= true
 create_high_cpu_alarm           	        = true
 create_memory_too_low_alarm			= true
 create_storage_space_too_low_alarm	        = true
-
 ##Cloudwatch alarm name prefix format --> <cwa>-<rds>-<rds engine>-<App_Name>-<Environment>##
 name                                            = "cwa-rds-mssql-test"
 ##RDS identifier format --> <rds>-<App_Name>-<rds engine>-<Environment>-<Numeric>##
